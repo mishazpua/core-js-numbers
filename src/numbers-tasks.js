@@ -230,8 +230,15 @@ function isPrime(n) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(/* value, def */) {
-  throw new Error('Not implemented');
+function toNumber(value, def) {
+  const num = Number(value);
+  const num_1 = typeof num;
+
+  if (num_1 === number) {
+    return num;
+  } else {
+    return def;
+  }
 }
 
 /**
